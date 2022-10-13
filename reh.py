@@ -346,11 +346,10 @@ def smitenheinen():
     return pd.DataFrame(df, columns=['link','price','pdate'])
 
 def execute(temp):
-    # new_temp = pd.concat([engelvoelkers(), hausing(), expatrentalsholland()
-    #                       , denieuweverhuurmakelaar(), housingagency(), therentalagencyamsterdam()
-    #                       , oeihousing(), expatrentals(), wonen(), hbhousing()
-    #                       , rotsvast(), terhaarmakelaars(), smitenheinen()])
-    new_temp = engelvoelkers()
+    new_temp = pd.concat([engelvoelkers(), hausing(), expatrentalsholland()
+                          , denieuweverhuurmakelaar(), housingagency(), therentalagencyamsterdam()
+                          , oeihousing(), expatrentals(), wonen(), hbhousing()
+                          , rotsvast(), terhaarmakelaars(), smitenheinen()])
 
     new_temp = new_temp[new_temp.link.isin(temp.link.unique()) == False]
     new_temp.reset_index(inplace=True, drop = True)
