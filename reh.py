@@ -7,8 +7,8 @@ from telethon.sessions import StringSession
 import re
 
 api_id = 15122868
-api_hash = '2d9f72bbdf7f1fd8474cb5ff87b23008'
-string_session = str("1ApWapzMBu7Z2R1yZnwZn1qaX_KGCHya9gGsAxp54Y1JrsFU-goCocpydbB1uLNxfZuJ4kZRGBPXvDFnFSzGXi6migaXP_6Seh8XnazK31pIbigSs67_AQe0b4JAivvIiImh-UgjWXqV9QeRFYHCBOsLW4MA8ctWS9RQTImNRHEozGReljnIv7Z2XF09lsP80qKZ9XRXfhyBuga5mMOOuJv6FIq_tpnaYkaFMaLWWY8G3WwO1feOipfnQfDDtQUoSHKzv-7R9c9yf7_V7BnWA7FfspCyO_K__ehyZq7QXhy31dXB-A8rp6Hk0wTNzMg9_tI6VnrDR1cwzU-wSBJQGqRvZ6clUfII=")
+api_hash = 'xxxx'
+string_session = str("xxxx")
 
 ua = UserAgent()
 
@@ -374,9 +374,8 @@ with TelegramClient(StringSession(string_session), api_id, api_hash) as client:
         message += '\n\n**Ссылка:** ' + str(link)
 
         print(message)
-        # -1001372316778
 
-        client.send_message(-1001372316778, message)
+        client.send_message(channel_id, message)
     client.run_until_disconnected()
 
 
